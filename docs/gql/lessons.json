@@ -1,5 +1,5 @@
 [
-    {"title":"Getting Started","address":"/gql/gettingStarted"},
+    {"title":"Getting Started","address":"https://kevsimps/temptool/gql/gettingStarted"},
     {"title":"Exploring the Query","address":"https://webexcc-sa.github.io/tools/gql/exploringData"},
     {"title":"Introduction to Filtering","address":"https://webexcc-sa.github.io/tools/gql/introFiltering"},
     {"title":"Using Aggregations in the Query","address":"https://webexcc-sa.github.io/tools/gql/aggregations"},
