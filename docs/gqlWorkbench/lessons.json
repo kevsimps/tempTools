@@ -1,0 +1,8 @@
+[
+    {"title":"Getting Started","address":"https://webexcc-sa.github.io/tools/gql/gettingStarted"},
+    {"title":"Exploring the Data","address":"https://webexcc-sa.github.io/tools/gql/exploringData"},
+    {"title":"Adding to Our query","address":"https://webexcc-sa.github.io/tools/gql/addingToQuery"},
+    {"title":"Introduction to Filtering","address":"https://webexcc-sa.github.io/tools/gql/introFiltering"},
+    {"title":"Creating Compound Filters","address":"https://webexcc-sa.github.io/tools/gql/compoundFiltering"},
+    {"title":"Reporting on Global Variables","address":"https://webexcc-sa.github.io/tools/gql/globalVariables"}
+    ]
