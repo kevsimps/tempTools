@@ -19,9 +19,11 @@ In this group of labs we will be exploring how to use GraphQL to get data from t
 - You will need the ORG ID of the tenant from which you will accessing data.
 - You watched the introduction video so that you understand how to navigate the tools in the lab.
 - It is recommended to create a new profile in your browser to access the labs
+  
     >  [For Firefox](https://support.mozilla.org/en-US/kb/profile-manager-create-remove-switch-firefox-profiles){:target="_blank"}
     >
     >  [For Chrome](https://support.google.com/chrome/answer/2364824){:target="_blank"}
+
 - While not required, it is a good idea to use a tenant which has had some recent traffic so that you have data to query
 
 ## Lab Objective
@@ -54,37 +56,38 @@ In this group of labs we will be exploring how to use GraphQL to get data from t
 2. Using the Time Widget, select from "1 week ago" to "Now"
 
     > <textarea spellcheck="false" cols="70" rows="25" >
-    \{
+  {
   task(
-    from: "_____"
-    to: "_____"
+    from: " __ "
+    to: " __ "
     timeComparator: createdTime
-    aggregations: [\{ field: "id", type: count, name: "calls" \}]
-    aggregationInterval: \{ interval: DAILY \}
-  ) \{
-    tasks \{
+    aggregations: [{ field: "id", type: count, name: "calls" }]
+    aggregationInterval: { interval: DAILY }
+  ) {
+    tasks {
       intervalStartTime(sort: asc)
-      aggregation \{
+      aggregation {
         name
         value
-      \}
-    \}
-    pageInfo \{
+      }
+    }
+    pageInfo {
       endCursor
       hasNextPage
-    \}
-    intervalInfo \{
+    }
+    intervalInfo {
       interval
       timezone
-    \}
-    \}
-    \}</textarea>
+    }
+    }
+    }</textarea>
 
-3. Run the query by clicking the Send Request button (you may need to toggle or move the guide tab) or use the keyboard shortcut ctrl+enter
-4. Copy an intervalStartTime value from the response pane
-5. Open the time tool and switch to the Lookup tab
-6. Paste the value and click Convert
+1. Run the query by clicking the Send Request button (you may need to toggle or move the guide tab) or use the keyboard shortcut ctrl+enter
+2. Copy an intervalStartTime value from the response pane
+3. Open the time tool and switch to the Lookup tab
+4. Paste the value and click Convert
    > <details> <summary>What is that timestamp telling you?</summary>
+
     > The day of the week
     > </details>
     > <details> <summary>What time zone is the timestamp in?</summary>
@@ -94,12 +97,13 @@ In this group of labs we will be exploring how to use GraphQL to get data from t
     > 
     > </details>
  
-7. Update the aggregation interval to be in your preferred time zone by adding the timezone field of the aggregationInterval argument. 
+5. Update the aggregation interval to be in your preferred time zone by adding the timezone field of the aggregationInterval argument. 
     > Example:
-    > <textarea spellcheck="false" cols="70">aggregationInterval: \{ interval: DAILY, timezone:"America/New_York" \}</textarea>
+    > <textarea spellcheck="false" cols="70">aggregationInterval: { interval: DAILY, timezone:"America/New_York" }</textarea>
+
     > You can find a list of time zone [here](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones){:target="_blank"}
 
-8. Note that the daily intervals now begins at 0:00 in the set time zone.
+6. Note that the daily intervals now begins at 0:00 in the set time zone.
 
 ### Click Next to continue to the next lesson
 

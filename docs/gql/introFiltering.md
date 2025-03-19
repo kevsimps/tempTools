@@ -1,5 +1,10 @@
 ---
 title: "Introduction to Filtering"
+hide:
+    -toc
+    -navigation
+search:
+  exclude: true
 ---
 
 
@@ -54,146 +59,148 @@ While single filters can be useful, it is common to need more that one filter to
          <img src="https://webexcc-sa.github.io/tools/gql/images/addNew.png"/>
          </details>
 2. <details><summary>Copy the query from the "Exploring the Query" lab.</summary>
+   
     <textarea spellcheck="false" cols="70" rows="138">
-\{
-  task(
-    from: "_____"
-    to: "_____"
-    timeComparator: createdTime
-    # filter: 
-    # aggregation: 
-    # aggregations: [\{ field: "string", type: count, name: "string" \}]
-    # aggregationInterval: \{ interval: FIFTEEN_MINUTES \}
-    # pagination: 
-  ) \{
-    tasks \{
-      id
-      status
-      channelType
-      createdTime
-      endedTime
-      origin
-      destination
-      contactReason
-      direction
-      owner \{
+  {
+    task(
+      from: " ___ "
+      to: " ___ "
+      timeComparator: createdTime
+      # filter: 
+      # aggregation: 
+      # aggregations: [{ field: "string", type: count, name: "string" }]
+      # aggregationInterval: { interval: FIFTEEN_MINUTES }
+      # pagination: 
+    ) {
+      tasks {
         id
-        name
-        signInId
-        sessionId
-        phoneNumber
-        channelId
-      \}
-      terminationType
-      channelSubType
-      customer \{
-        name
-        phoneNumber
-        email
-      \}
-      isActive
-      isCallback
-      channelMetaData \{
-        email \{
-          subject
-          metaData
-        \}
-        chat \{
-          chatReason
-        \}
-        inBoundTranscript
-        outBoundTranscript
-      \}
-      callbackData \{
-        callbackRequestTime
-        callbackConnectTime
-        callbackNumber
-        callbackStatus
-        callbackOrigin
-        callbackType
-        callbackQueueName
-        callbackAgentName
-        callbackTeamName
-        callbackRetryCount
-      \}
-      recordingLocation
-      lastWrapupCodeName
-      lastQueue \{
-        id
-        name
-        duration
-      \}
-      lastSite \{
-        id
-        name
-      \}
-      lastTeam \{
-        id
-        name
-      \}
-      lastEntryPoint \{
-        id
-        name
-      \}
-      previousQueue \{
-        id
-        name
-      \}
-      totalDuration
-      csatScore
-      blindTransferCount
-      conferenceCount
-      conferenceDuration
-      consultCount
-      consultDuration
-      holdCount
-      holdDuration
-      selfserviceCount
-      selfserviceDuration
-      connectedCount
-      connectedDuration
-      consultToQueueCount
-      consultToQueueDuration
-      transferCount
-      wrapupDuration
-      ringingDuration
-      queueDuration
-      queueCount
-      captureRequested
-      isTranscriptionAvailable
-      consultToEPCount
-      consultToEPDuration
-      outdialConsultToEPCount
-      outdialConsultToEPDuration
-      agentToDnTransferCount
-      agentToAgentTransferCount
-      callCompletedCount
-      sentiment
-      autoCsat
-      outdialConsultToQueueCount
-      outdialConsultCount
-      # integerGlobalVariables(name: "string")
-      # stringGlobalVariables(name: "string")
-      # longGlobalVariables(name: "string")
-      # doubleGlobalVariables(name: "string")
-      # booleanGlobalVariables(name: "string")
-      # intervalStartTime
-      # aggregation
-    \}
+        status
+        channelType
+        createdTime
+        endedTime
+        origin
+        destination
+        contactReason
+        direction
+        owner {
+          id
+          name
+          signInId
+          sessionId
+          phoneNumber
+          channelId
+        }
+        terminationType
+        channelSubType
+        customer {
+          name
+          phoneNumber
+          email
+        }
+        isActive
+        isCallback
+        channelMetaData {
+          email {
+            subject
+            metaData
+          }
+          chat {
+            chatReason
+          }
+          inBoundTranscript
+          outBoundTranscript
+        }
+        callbackData {
+          callbackRequestTime
+          callbackConnectTime
+          callbackNumber
+          callbackStatus
+          callbackOrigin
+          callbackType
+          callbackQueueName
+          callbackAgentName
+          callbackTeamName
+          callbackRetryCount
+        }
+        recordingLocation
+        lastWrapupCodeName
+        lastQueue {
+          id
+          name
+          duration
+        }
+        lastSite {
+          id
+          name
+        }
+        lastTeam {
+          id
+          name
+        }
+        lastEntryPoint {
+          id
+          name
+        }
+        previousQueue {
+          id
+          name
+        }
+        totalDuration
+        csatScore
+        blindTransferCount
+        conferenceCount
+        conferenceDuration
+        consultCount
+        consultDuration
+        holdCount
+        holdDuration
+        selfserviceCount
+        selfserviceDuration
+        connectedCount
+        connectedDuration
+        consultToQueueCount
+        consultToQueueDuration
+        transferCount
+        wrapupDuration
+        ringingDuration
+        queueDuration
+        queueCount
+        captureRequested
+        isTranscriptionAvailable
+        consultToEPCount
+        consultToEPDuration
+        outdialConsultToEPCount
+        outdialConsultToEPDuration
+        agentToDnTransferCount
+        agentToAgentTransferCount
+        callCompletedCount
+        sentiment
+        autoCsat
+        outdialConsultToQueueCount
+        outdialConsultCount
+        # integerGlobalVariables(name: "string")
+        # stringGlobalVariables(name: "string")
+        # longGlobalVariables(name: "string")
+        # doubleGlobalVariables(name: "string")
+        # booleanGlobalVariables(name: "string")
+        # intervalStartTime
+        # aggregation
+      }
 
-    pageInfo \{
-      endCursor
-      hasNextPage
-    \}
-    intervalInfo \{
-      interval
-      timezone
-    \}
-  \}
-\}</textarea></details>
+      pageInfo {
+        endCursor
+        hasNextPage
+      }
+      intervalInfo {
+        interval
+        timezone
+      }
+    }
+    }
+</textarea></details>
 
 1. Uncomment "filter:"
-2. Next to "filter:" add <textarea spellcheck="false" cols="70">\{ channelType: \{ equals: telephony \} \}</textarea>
+2. Next to "filter:" add <textarea spellcheck="false" cols="70">{ channelType: { equals: telephony } }</textarea>
 3. Send the request
 4. Open the Docs panel
 5. Navigate Query > task > filter > ChannelTypeExpression (do not click channelType as it will not show you the next level of information) > (next to equals) ChannelTypes
@@ -202,17 +209,17 @@ While single filters can be useful, it is common to need more that one filter to
 7. Navigate to terminiationType
     - <details><summary>What type of filter is terminationType?</summary>String</details>
 8.  Before we can add this filter to our query, we need to create an "and" group.  Add the "and" group like this. <textarea spellcheck="false" cols="70" rows="4" >and: [
-        \{ channelType: \{ equals: telephony \} \}
+        { channelType: { equals: telephony } }
 ]</textarea>
-1.  <details><summary>Below the channelType filter and still inside the and brackets, add a filter for terminationType to equal "normal".</summary> <textarea spellcheck="false" cols="70" rows="1">\{ terminationType: \{ equals: "normal" \} \}</textarea></details>
+1.  <details><summary>Below the channelType filter and still inside the and brackets, add a filter for terminationType to equal "normal".</summary> <textarea spellcheck="false" cols="70" rows="1">{ terminationType: { equals: "normal" } }</textarea></details>
 2.  Send the request.
     - You should only have records returned which were both from the telephony channelType and had a "normal" terminationType
     - <details><summary>What if you wanted to see all calls which did not terminate normally?</summary> you could change "equals" to "notequals"
-        <textarea spellcheck="false" cols="70" rows="1">\{ terminationType: \{ notequals: "normal" \} \}</textarea>
+        <textarea spellcheck="false" cols="70" rows="1">{ terminationType: { notequals: "normal" } }</textarea>
 
         OR you could place the filter in a "not" group filter 
         
-        <textarea spellcheck="false" cols="70" rows="1">\{ not: \{ terminationType: \{ equals: "normal" \} \} \}</textarea></details>
+        <textarea spellcheck="false" cols="70" rows="1">{ not: { terminationType: { equals: "normal" } } }</textarea></details>
 3.  Change your filters to return calls which did not have a terminiationType of "normal"
     - What terminationTypes are returned?
 

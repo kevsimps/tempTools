@@ -1,0 +1,18 @@
+{
+  "entries": [
+    "components/wxcc-altair/wxcc-altair.js",
+    "components/wxcc-auth-demo-widget/wxcc-auth-demo-widget.js",
+    "components/wxcc-auth-widget/wxcc-auth-widget.js",
+    "components/wxcc-guide-panel/wxcc-guide-panel.js",
+    "components/wxcc-page-controls/wxcc-page-controls.js",
+    "components/wxcc-time/wxcc-time.js",
+    "components/wxcc-video-modal/wxcc-video-modal.js"
+  ],
+  "compiler": {
+    "name": "@stencil/core",
+    "version": "4.28.0",
+    "typescriptVersion": "5.5.4"
+  },
+  "collections": [],
+  "bundles": []
+}

@@ -1,5 +1,10 @@
 ---
 title: "Using Aggregations in the Query"
+hide:
+    -toc
+    -navigation
+search:
+  exclude: true
 ---
 
 
@@ -28,18 +33,21 @@ In this lab we will be combining all that we have learned in the previous labs t
 2. Open the Docs tab and navigate to Query > task > aggregations 
    - (Note that if you click into "aggregation" instead of "aggregations" it shows as deprecating soon, so we will not be using it.)
 3. Note the list of fields that you have available to construct your aggregation
-   - The required fields are:
-     -  field - The field on which the aggregation operation is to be done
-     -  type - The type of aggregation operation
-     -  name - The name field of the output aggregation
-  
-   - {% raw %}If you wanted to return a count of tasks and name it "All Tasks":
-  
-        <textarea spellcheck="false" cols="70" rows="2">aggregations: [{ field: "id", type: count, name: "All Tasks" }]</textarea>
+      - The required fields are:
+        -  field - The field on which the aggregation operation is to be done
+        -  type - The type of aggregation operation
+        -  name - The name field of the output aggregation
+     
+      - If you wanted to return a count of tasks and name it "All Tasks":
+     
+           <textarea spellcheck="false" cols="70" rows="2">
+           aggregations: [{ field: "id", type: count, name: "All Tasks" }]
+           </textarea>
 
-   - If you wanted to also return a count of tasks which were calls and name it "Calls":
+      - If you wanted to also return a count of tasks which were calls and name it "Calls":
   
-        <textarea spellcheck="false" cols="70" rows="9">aggregations: [
+        <textarea spellcheck="false" cols="70" rows="9">
+        aggregations: [
   { field: "id", type: count, name: "All Tasks" }
   {
   field: "id"
@@ -47,8 +55,9 @@ In this lab we will be combining all that we have learned in the previous labs t
   name: "Calls" 
   filter:{channelType:{equals:telephony}}
   }
-  ]</textarea>
-{% endraw %}
+  ]
+  </textarea>
+
      
      - Note that you can separate via a comma or new line.
 
@@ -56,10 +65,11 @@ In this lab we will be combining all that we have learned in the previous labs t
 1. Copy this query to return the average queue duration
    - Use the Time Widget to retrieve a weeks worth of data and run the query
   
-    {% raw %} <textarea spellcheck="false" cols="70" rows="19">{
+    <textarea spellcheck="false" cols="70" rows="19">
+    {
   task(
-    from: "____"
-    to: "____"
+    from: " ___ "
+    to: " ___ "
     timeComparator: createdTime
     filter: {}
     aggregations: [
@@ -73,21 +83,24 @@ In this lab we will be combining all that we have learned in the previous labs t
       }
     }
   }
-}</textarea>
+}
+</textarea>
 
-2. <details><summary>Add the min and max queue duration and run the query</summary><textarea spellcheck="false" cols="70" rows="6">aggregations: [
+2. <details><summary>Add the min and max queue duration and run the query</summary>
+   <textarea spellcheck="false" cols="70" rows="6">
+   aggregations: [
       { field: "queueDuration", type: average, name: "Average Queue Duration" }
       { field: "queueDuration", type: min, name: "Minimum Queue Duration" }
       { field: "queueDuration", type: max, name: "Maximum Queue Duration" }
-    ]</textarea> </details>
+    ]
+    </textarea> </details>
 
 3. <details><summary>Isolate the queue durations by channelType by adding channelType in the fields list directly above aggregation and run the query</summary><img src="https://webexcc-sa.github.io/tools/gql/images/channelType.gif"></details>
 4. <details><summary>Let's filter the entire query to only return telephony tasks using the report filter and remove channelType from the fields list in task</summary><img src="https://webexcc-sa.github.io/tools/gql/images/channelTypefilter.gif"></details>
 5. <details><summary>Isolate the queue durations by terminationType</summary><img src="https://webexcc-sa.github.io/tools/gql/images/terminationType.gif"></details>
-   
-   - What is the average time to abandon?
-   - What is the average speed of answer?
-   - What is the maximum time in queue?
+      - What is the average time to abandon?
+      - What is the average speed of answer?
+      - What is the maximum time in queue?
 
 ## Delving into the Data
 1. <details><summary>Add filters to the main query filter to only return normal and abandoned calls</summary><textarea spellcheck="false" cols="70" rows="11">  filter: {
@@ -148,6 +161,6 @@ In this lab we will be combining all that we have learned in the previous labs t
       }</textarea></details>  
 
 
-{% endraw %}
+
 ### Click Next to continue to the next lesson
 <!-- <textarea spellcheck="false" cols="70" rows="4"></textarea> -->

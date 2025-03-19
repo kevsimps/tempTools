@@ -1,5 +1,10 @@
 ---
 title: "Adding Global Variables Into Your Query"
+hide:
+    -toc
+    -navigation
+search:
+  exclude: true
 ---
 
 

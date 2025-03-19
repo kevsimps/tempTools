@@ -1,0 +1,213 @@
+aside {
+    position: fixed;
+    /* top:8%; */
+    bottom: 0;
+    right: -100%;
+    width: 40rem;
+    max-width: 34%;
+    height: 92vh;
+    background: #d6c5c5;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.27);
+    transition: right 1.3s ease-out;
+    z-index: 2;
+    overflow: scroll;
+    
+}
+
+
+:host([flip]) aside {
+    position: fixed;
+    bottom: 0;
+    left: -100%;
+    width: 40rem;
+    max-width: 34%;
+    height: 92vh;
+    background: #d6c5c5;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.27);
+    transition: left 1.3s ease-out;
+    z-index: 2;
+    overflow: scroll;
+    
+}
+
+:host([opened]) aside {
+    right: 0;
+
+}
+:host([opened][flip]) aside {
+
+  left:0;
+    /* right: 67% */
+
+}
+main slot{
+    margin: 1rem;
+}
+
+.flipper{
+   float : right;
+}
+.post-header{
+    display: none;
+    /* position: fixed; */
+}
+header {
+    display: block;
+    padding: 1rem;
+    /* background: black; */
+    background: #2196F3;
+    position: fixed;
+    top: 8%;
+    /* width: 100%; */
+    width: 31.75%;
+
+}
+
+h1.post-title {
+    font-size: 1.5rem;
+    color: white;
+    margin: 0;
+
+}
+.md-content,
+.post-content {
+    margin: 1em;
+}
+
+h1 {
+    font-size: 1.5rem;
+    margin: 0;
+
+}
+
+header button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 1rem;
+    color: white;
+    background: transparent;
+    font-size: 1.5rem;
+    border: none;
+
+}
+
+header button:focus {
+    outline: none;
+}
+
+#tabs {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 1rem 0;
+    padding-top: 4rem;
+
+}
+
+#tabs button {
+    width: 30%;
+    background: white;
+    color: black;
+    text-align: center;
+    border: 1px solid  #2196F3;
+    font: inherit;
+    padding: 0.15rem 0;
+
+}
+
+#tabs :nth-child(1) {
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+#tabs :nth-last-child(1) {
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+#tabs button.active,
+#tabs button:hover,
+#tabs button:active {
+    /* background:black; */
+    background: #2196F3;
+    color: white;
+    border: 1px solid #2196F3
+}
+
+#tabs button:focus {
+    outline: none;
+}
+
+#contact-information {
+    padding: 0 1rem;
+
+}
+
+/* .backdrop {
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    height:100vh;
+    background: rgba(0, 0, 0, 0.75);
+    z-index: 10;
+    display: none;
+    opacity:0;
+    pointer-events: none;
+    transition: opacity 0.5s ease-out;
+}
+:host([opened]) .backdrop{
+    display: block;
+    opacity:1;
+    pointer-events: all;
+
+
+} */
+ .md-toggle,
+ .md-header__inner,
+ .md-skip,
+ .md-header--shadow,
+ .md-footer,
+ /* .md-grid, */
+ .md-overlay,
+.site-header,
+.site-footer,
+.book-header,
+.book-summary,
+.search-results {
+    display: none;
+}
+
+ul.nav {
+    margin: 1em;
+    padding: 0;
+    list-style: none;
+
+}
+
+li.nav {
+    margin: 0.25rem 0;
+    padding: 0.25rem;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+
+li.nav:hover,
+li.nav:active {
+    /* background:black; */
+    background: #2196F3;
+    color: white;
+}
+
+svg{
+    fill:#c0c0c0;
+    height:20px;
+    width:80px;
+}
+svg:hover{
+    fill: #f0efef;
+    /* fill: #f7f7f7 */
+}
+
+/* for gql lessons */
+.btn{border-radius:30px;padding:5px 10px; border:1px #2196F3}.btn:hover{background: #2196F3;color:white;}table td,table th{border:1px solid #404040;}table{border-collapse: collapse;}

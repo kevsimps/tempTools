@@ -1,7 +1,7 @@
 [
-    {"title":"Getting Started","address":"https://kevsimps/temptool/gql/gettingStarted"},
-    {"title":"Exploring the Query","address":"https://webexcc-sa.github.io/tools/gql/exploringData"},
-    {"title":"Introduction to Filtering","address":"https://webexcc-sa.github.io/tools/gql/introFiltering"},
-    {"title":"Using Aggregations in the Query","address":"https://webexcc-sa.github.io/tools/gql/aggregations"},
-    {"title":"Adding Global Variables Into Your Query","address":"https://webexcc-sa.github.io/tools/gql/globalVariables"}
+    {"title":"Getting Started","address":"https://kevsimps.github.io/tempTools//gql/gettingStarted"},
+    {"title":"Exploring the Query","address":"https://kevsimps.github.io/tempTools//gql/exploringData"},
+    {"title":"Introduction to Filtering","address":"https://kevsimps.github.io/tempTools//gql/introFiltering"},
+    {"title":"Using Aggregations in the Query","address":"https://kevsimps.github.io/tempTools//gql/aggregations"},
+    {"title":"Adding Global Variables Into Your Query","address":"https://kevsimps.github.io/tempTools//gql/globalVariables"}
     ]
