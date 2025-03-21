@@ -1,5 +1,5 @@
 ---
-title: "Pebble Templates"
+title: "Pebble Templates Cheat Sheet"
 hide:
     # -toc
     -navigation
@@ -11,11 +11,11 @@ hide:
     }
 </style>
 
-## These examples were created using the documentation available on the [Pebble Templates](https://pebbletemplates.io/){:target="_blank"} site.
+These examples were created using the documentation available on the [Pebble Templates](https://pebbletemplates.io/){:target="_blank"} site.
 
 
 
-# Time
+## Time
 
 > Return the current date and time in UTC (yyyy-MM-dd'T'HH:mm:ss.SSS'Z)
 >
@@ -52,7 +52,7 @@ hide:
 >
 > <textarea readonly>\{\{ EWT/60000 + (( EWT % 60000)/1000 >= 30 ? 1 : 0 )  \}\}</textarea><br>
 
-# Strings
+## Strings
 
 > Return the last 10 characters of an ANI 
 > 
@@ -83,7 +83,7 @@ hide:
 >
 
 
-# Numbers, Logic, and Comparison
+## Numbers, Logic, and Comparison
 
 > Increment a counter 
 >

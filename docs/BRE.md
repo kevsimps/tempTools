@@ -104,7 +104,7 @@ If you are updating the data on your table [skip to the update data section](#ad
 >
 > <details> <summary>How to cross launch to BRE Rules</summary>
 >
-> <img style="position: relative" src="/assets/BRE/BRE_CrossLaunch.gif"/>
+> <img style="position: relative" src="../assets/BRE/BRE_CrossLaunch.gif"/>
 > </details>
 
 
@@ -230,9 +230,11 @@ when<br>
 <!-- > [https://rules.wxcc-us1.cisco.com/datasync/login](https://rules.wxcc-us1.cisco.com/datasync/login){:target="_blank"} -->
 >
 > <details> <summary>Click the cluster to login</summary>
-> <img style="position: relative" src="/assets/BRE/BRE_Login_New.jpg"/>
+> <img style="position: relative" src="../assets/BRE/BRE_Login_New.jpg"/>
 >
 > </details>
+>
+> ---
 <!-- >
 >
 >> Login using your tenant admin credentials if prompted
@@ -241,13 +243,13 @@ when<br>
 > <img style="position: relative" src="BRE_Site.jpg"/>
 > -->
 <!-- > </details> -->
->
-> ---
+<!-- >
+> --- -->
 
 ### Adding and updating data
 >
 > <details> <summary>Click Add BRE Data</summary>
-> <img style="position: relative" src="/assets/BRE/BRE_AddData.jpg"/>
+> <img style="position: relative" src="../assets/BRE/BRE_AddData.jpg"/>
 >
 > </details>
 >
@@ -284,13 +286,13 @@ when<br>
 > > Action: the action you want taken on the key (ADD, UPDATE, DELETE)
 > >
 > > <details> <summary>Example</summary>
-> > <img style="position: relative" src="/assets/BRE/BRE_CSV_Example.jpg"/>
+> > <img style="position: relative" src="../assets/BRE/BRE_CSV_Example.jpg"/>
 > > </details>
 > >
 >
 >
 > <details> <summary>Click Upload BRE CSV data</summary>
-> <img style="position: relative" src="/assets/BRE/BRE_AddDataBulk.jpg"/>
+> <img style="position: relative" src="../assets/BRE/BRE_AddDataBulk.jpg"/>
 >
 > </details>
 >
@@ -309,24 +311,24 @@ when<br>
 
 ## Accessing the BRE data from your flow
 > <div style="width: 465px; height: 357px;position:relative">
-> <img style="position: relative; width: 465px; height: 357px;" src="/assets/BRE/BRE_Params.jpg"/>
+> <img style="position: relative; width: 465px; height: 357px;" src="../assets/BRE/BRE_Params.jpg"/>
 > <w style="position: absolute; top: 27%; left:53%; color: rgb(0,0,0);" class = "context_out">table</w>
 > <w style="position: absolute; top: 41%; left: 8%; color: rgb(0,0,0)" class = "key_out">ani</w>
 > <w style="position: absolute; top: 41%; left: 53%; color: rgb(0,0,0)" class="lookup-var_out">your lookup value</w>
 > </div>
-
----
+>
+> ---
 
 
 ## Parsing BRE data to a variable
 > <div style="width: 457px; height: 216px;position:relative">
 >
-> <img style="position: relative" src="/assets/BRE/BRE_Parse.jpg"/>
+> <img style="position: relative" src="../assets/BRE/BRE_Parse.jpg"/>
 > <w style="position: absolute; top: 65px; left:40px; color: rgb(0,0,0)" class="data-var_out">YourOutputVariable</w>
 > <w style="position: absolute; top: 140px; left:40px; color: rgb(0,0,0)">$.<w class = label_out>routeInfo</w></w>
 > </div>
-
----
+>
+> ---
 
 <script>
     function update(){them = Array.from(document.querySelectorAll("input")).reduce((acc, input) => ({...acc, [input.id + "_out"] : input.value}),{});
