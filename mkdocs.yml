@@ -1,4 +1,5 @@
 site_name: WxCC Tools
+site_url: https://kevsimps.github.io/tempTools
 theme:
   name: material
   logo: assets/template/webexLogo91.png
