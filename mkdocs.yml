@@ -1,9 +1,10 @@
 site_name: WxCC Tools
-site_url: https://kevsimps.github.io/tempTools
+# site_url: https://kevsimps.github.io/tempTools
 theme:
   name: material
   logo: assets/template/webexLogo91.png
   favicon: assets/template/webex75.png
+  custom_dir: overrides
   palette:
   # Palette toggle for light mode
   - media: "(prefers-color-scheme: light)"
