@@ -1,7 +1,7 @@
 site_name: WxCC Tools
 theme:
   name: material
-  logo: /assets/template/webexLogo91.png
+  logo: assets/template/webexLogo91.png
   favicon: assets/template/webex75.png
   palette:
   # Palette toggle for light mode
